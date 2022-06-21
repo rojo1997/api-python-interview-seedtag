@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  api-python-interview-seedtag:
+    build:
+      context: .
+      args:
+        PIPSERVER_URL: ${PIPSERVER_URL}
+        PIPSERVER_USERNAME: ${PIPSERVER_USERNAME}
+        PIPSERVER_PASSWORD: ${PIPSERVER_PASSWORD}
+    image: api-python-interview-seedtag
+    ports:
+      - 3000:3000
+    environment:
+      ROOT_PATH: ${ROOT_PATH}
+      FASTAPI_PORT: ${FASTAPI_PORT}
+      FASTAPI_LOG: ${FASTAPI_LOG}
+      FASTAPI_WORKERS: ${FASTAPI_WORKERS}

@@ -1,0 +1,2 @@
+class ModelSelectionException(Exception):
+    pass

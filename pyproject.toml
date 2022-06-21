@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "api-python-interview-seedtag"
+version = "0.1.0"
+description = ""
+authors = ["Ernesto Martinez del Pino <ernestomar1997@hotmail.com>"]
+packages = [
+    { include = "app" },
+    { include = "tests" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "0.78.*"
+python-decouple = "^3.6"
+uvicorn = "latest"
+interview-seedtag = {version = "0.1.*", source = "omnia"}
+numpy = "^1.22.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+coverage = {extras = ["toml"], version = "^6.3.2"}
+flake8 = "^4.0.1"
+flake8-bugbear = "^22.3.23"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.report]
+fail_under = 0
+
+[[tool.poetry.source]]
+name = "omnia"
+url = "https://pypiserver.omniaintel.com"
+secondary = true
